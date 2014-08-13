@@ -1,0 +1,15 @@
+{
+  "name": "Castddit",
+  "author": "Matt Fuller <matthewdf10@gmail.com>",
+  "version": "0.0.1",
+  "description": "Cast Reddit to your Chromecast",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:matthewdfuller/castddit.git"
+  },
+  "dependencies": {
+    "ejs": "~0.8.4",
+    "ejs-locals": "~1.0.2",
+    "express": "~3.1.0"
+  }
+}

@@ -1,0 +1,91 @@
+<% block('bodyscripts','<script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"><\/script>') -%>
+
+<% block('bodyscripts','<script src="/js/pages/reddit.min.js"><\/script>') -%>
+
+<div class="main">
+	<div class="main-inner">
+	    <div class="container">
+		<div class="row">
+	      	<div class="span9">
+	      		<div class="widget ">
+	      			
+	      			<div class="widget-header">
+	      				<i class="icon-th-list"></i>
+	      				<h3>Cast Reddit To Your TV</h3>
+	  			</div> <!-- /widget-header -->
+				
+				<div class="widget-content">
+                                    <div id="subreddit-to-tv">
+                                        <% if (locals && url) { %>
+						<span class="hidden" id="subreddit-val"><%= url %></span>
+						<a href="http://reddit.com<%= url %>"><%= url %></a><br/>
+					<% } else { %>
+						<span class="hidden" id="subreddit-val">null</span>
+						<a href="http://reddit.com">/r/null</a><br/>
+					<% } %>
+                                            
+                                            <i class="icon-arrow-down"></i><br/>
+                                            Chromecast
+                                    </div>
+                                    <div id="output">
+                                        
+                                    </div>
+				</div>
+					
+						
+			</div> <!-- /widget -->
+	      		
+		</div> <!-- /span8 -->
+                
+                <div class="span3">
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h3>Controls and Ads</h3>
+                        </div>
+                        <div class="widget-content">
+				<p><strong>Now Playing:</strong> <span id="nowplaying"></span></p>
+				<br/>
+				<div class="center-text">
+					<button id="stop-casting-button" class="btn btn-success">Stop Casting</button>
+					<br/><br/>
+					<div id="incdec">
+						<button id="down" class="btn btn-primary">-</button>
+						<input id="delayinput" type="text" value="0" />
+						<button id="up" class="btn btn-primary" >+</button>
+					</div>
+					<hr/>
+					<strong>Bitcoin Donation: </strong><br/>
+					1JJydaa95GDR7aaG5GUdJbW56Jh6phJEvD
+					<br/>
+					<br/>
+					<% if (locals && ad === 'yes') { %>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Castddit - Right Sidebar -->
+						<ins class="adsbygoogle"
+						     style="display:inline-block;width:120px;height:600px"
+						     data-ad-client="ca-pub-0526078547696979"
+						     data-ad-slot="6900751687"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+						<br/>
+						Ads help pay for the hosting. Feel free to use AdBlock :)
+					<% } else { %>
+						<p></p>
+					<% } %>
+				</div>
+                            
+                        </div>
+                    </div>
+                </div>
+	      	
+	      	
+	      	
+	      	
+	      </div> <!-- /row -->
+	
+	    </div> <!-- /container -->
+	    
+	</div> <!-- /main-inner -->
+    
+</div>
